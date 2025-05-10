@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ms">
+  <!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DIGITAL DIC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e6f0fa, #ffe6e6);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5b9bd5;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Menambah gaya untuk tajuk DIGITAL DIC */
+        h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 4rem;
+            color: #FF00FF;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        /* Animasi untuk bounce efek pada tajuk */
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        #search input {
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            margin: 3px;
+            padding: 8px 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5b9bd5;
+            color: white;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #4176aa;
+        }
+        .card {
+            background: linear-gradient(to bottom right, #e6f0fa, #ffe6e6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        footer {
+            background-color: #5b9bd5;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DIGITAL DIC</h1>
+        <nav>
+            <a href="#">Utama</a> 
+            <section class="intro">
+                <h2>Selamat datang ke Digital Dic</h2>
+            </section> 
+            <a href="#">Tentang</a>
+            <p>Aplikasi laman web yang khusus untuk pelajar kejururawatan dalam memahami terminologi medikal adalah alat yang sangat berguna dalam pembelajaran mereka. Aplikasi ini boleh membantu pelajar kejururawatan untuk menguasai istilah-istilah perubatan yang kompleks melalui pendekatan yang lebih interaktif dan mudah diakses.</p>            
+            <a href="#">Hubungi</a>
+            <p>Kami sentiasa berusaha untuk meningkatkan pengalaman pengguna di Digital Dic. Jika anda mempunyai sebarang pertanyaan, cadangan, atau maklum balas, sila hubungi kami melalui kaedah berikut:</p>
+                <ul>
+                    <li><strong>Emel:</strong> <a href="nurhidayah_h@gapps.kptm.edu.my">nurhidayah_h@gapps.kptm.edu.my</a></li>
+                    <li><strong>Telefon:</strong> 0199802862</li>
+                    <li><strong>Alamat:</strong> Jabatan Kejururawatan, Kolej Poly-Tech Mara Kota Bharu, 15050, Lembah Sireh, Kota Bharu, Kelantan</li>
+                </ul>
+                <p>Atau, anda juga boleh menghantar maklumbalas terus kepada kami menggunakan kotak feedback  di bawah. Kami akan cuba memberikan maklum balas secepat mungkin.</p>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Kandungan laman web di sini -->
+    </div>
+<div class="container">
+  <section id="search">
+    <input type="text" id="searchInput" placeholder="Cari istilah..." onkeyup="filterTerms()" />
+  </section>
+
+  <section class="buttons" id="abjadButtons">
+    <button onclick="setLetter('ALL')">Semua</button>
+    <script>
+      const abjad = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      for (let i = 0; i < abjad.length; i++) {
+        document.write(`<button onclick="setLetter('${abjad[i]}')">${abjad[i]}</button>`);
+      }
+    </script>
+  </section>
+
+  <div class="card">
+    <ul id="termList">
+      <li data-letter="H"><strong>Hemoglobin</strong>: Protein dalam sel darah merah yang membawa oksigen ke seluruh tubuh.</li>
+      <li data-letter="T"><strong>Tachycardia</strong>: Degupan jantung lebih laju daripada biasa.</li>
+      <li data-letter="H"><strong>Hypertension</strong>: Tekanan darah tinggi.</li>
+      <li data-letter="H"><strong>Hypotension</strong>: Tekanan darah rendah.</li>
+      <li data-letter="S"><strong>Sepsis</strong>: Jangkitan serius dalam darah.</li>
+      <li data-letter="A"><strong>Apnea</strong>: Henti nafas sementara.</li>
+      <li data-letter="A"><strong>Arrhythmia</strong>: Ritma jantung tidak normal.</li>
+      <li data-letter="A"><strong>Azotemia</strong>: Peningkatan urea/nitrogen dalam darah.</li>
+      <li data-letter="A"><strong>Anuria</strong>: Tiada penghasilan urin.</li>
+      <li data-letter="A"><strong>Anaemia </strong>: Kekurang sel darah merah dalam badan.</li>
+      <li data-letter="A"><strong>Anaphylaxis </strong>:Alahan serius yang terjadi secara tiba-tiba dan boleh membawa maut. </li>
+      <li data-letter="B"><strong>Bedsore</strong>:Kudis tekanan</li>
+      <li data-letter="B"><strong>Blepharitis</strong>:Keradangan dibahagian kelopak mata</li>
+      <li data-letter="B"><strong>Blepharoplasty</strong>:Pembedahan plastik untuk kelopak mata</li>
+      <li data-letter="B"><strong>Bowleg</strong>:Kecacatan bentuk kaki dimana ruang antara lutut lebih besar daripada biasa</li>
+      <li data-letter="B"><strong>Bradycardia</strong>:Kadar nadi dan jantung yang perlahan bawah daripada 60 denyutan seminit</li>
+      <li data-letter="C"><strong>Cachexia</strong>: Kehilangan berat badan dan jisim otot secara mendadak dan menyebabkan lemah tubuh badan</li>
+      <li data-letter="C"><strong>Carbuncle </strong>:Bisul atau nanah yang terdapat di  bawah kulit yang menyebabkan keradangan dan sakit</li>
+      <li data-letter="C"><strong>Cardiomegaly</strong>:Pembesaran jantung yg luar biasa</li>
+      <li data-letter="C"><strong>Cellulitis</strong>:Keradangan pada kulit</li>
+      <li data-letter="C"><strong>Cholecystitis</strong>:Keradangan pada hempedu</li>
+      <li data-letter="C"><strong>Cyanosis</strong>: Kulit kebiruan kerana kekurangan oksigen.</li>
+      <li data-letter="D"><strong>Dyspnea</strong>: Kesukaran atau sesak nafas.</li>
+      <li data-letter="D"><strong>Dermatitis</strong>:Keradangan pada kulit yang mengakibatkan kegatalan dan kemerahan</li>
+      <li data-letter="D"><strong>Delirium</strong>:Kekeliruan teruk yang tiba-tiba berlaku kerana penyakit mental atau fizikal. </li>
+      <li data-letter="D"><strong>Dementia</strong>:Kehilangan fungsi otak yang menjejaskan ingatan, pemikiran, tingkah laku dan bahasa. </li>
+      <li data-letter="D"><strong>Diabetic ketoacidosi</strong>: Komplikasi diabetes di mana bahan yang dipanggil keton terkumpul di dalam darah ke paras yang berbahaya</li>
+      <li data-letter="D"><strong>Diabetic retinopathy</strong>:Komplikasi diabetes yang berlaku apabila salur darah kecil di retina rosak yang menjejaskan penglihatan atau bahkan menyebabkan buta</li>
+      <li data-letter="E"><strong>Edema</strong>: Bengkak akibat pengumpulan cecair berlebihan.</li>      
+      <li data-letter="E"><strong>Eclampsia</strong>:Keadaan serius berkaitan tekanan darah tinggi yang boleh mengancam nyawa wanita hamil dan kandungannya</li>
+      <li data-letter="E"><strong>Ejection fraction</strong>:Peratusan darah yang dipam keluar dari ventrikel kiri dengan setiap degupan jantung yang normal adalah 55% hingga 70%.</li>
+      <li data-letter="E"><strong>Embolism</strong>:Salur darah tersumbat dan telah bergerak dari bahagian lain badan.</li>
+      <li data-letter="E"><strong>Encephalitis</strong>:Keradangan otak yang serius dan membawa maut yang disebabkan oleh beberapa virus yang berbeza</li>
+      <li data-letter="E"><strong>Endocarditis</strong>:Keradangan pada lapisan jantung atau injap yang disebabkan oleh jangkitan bakteria</li>
+      <li data-letter="F"><strong>Fallopian tube</strong>:Tiub/ Salur Fallopian merujuk kepada struktur saluran di sistem reproduktif (pembiakan)yang mengangkut telur dari ovari kepada uterus (rahim wanita) .</li>
+      <li data-letter="F"><strong>Fascia</strong>:Satu jalur tisu rata di bawah kulit yang menutupi tisu di bawahnya dan memisahkan lapisan tisu yang berbeza. Fascia juga menyelubungi otot. .</li>
+      <li data-letter="F"><strong>Fasciitis</strong>:Keradangan pada fascia.</li>
+      <li data-letter="F"><strong>Fat embolism</strong>:Satu proses di mana tisu lemak masuk ke dalam salur darah dan tersumbat di dalam saluran darah. </li>
+      <li data-letter="F"><strong>Fatal</strong>:Berkaitan dengan atau menyebabkan kematian, menandakan terutamanya tidak dapat dielakkan atau tidak dapat dielakkan kematian</li>
+      <li data-letter="F"><strong>Febrile</strong>:Demam</li>
+      <li data-letter="F"><strong>Fecal/ Feces</strong>:Najis. Bahan kumuhan yang dibuang dari usus</li>
+      <li data-letter="F"><strong>Fertile</strong>:Dapat mengandung dan melahirkan zuriat. </li>
+      <li data-letter="F"><strong>Fertility</strong>:Keupayaan untuk hamil dan melahirkan anak, keupayaan untuk hamil melalui aktiviti seksual biasa</li>
+      <li data-letter="F"><strong>Fertilization</strong>:Proses menggabungkan gamet lelaki, atau sperma, dengan gamet perempuan, atau ovum. Hasil persenyawaan ialah sel yang dipanggil zigot. </li>
+      <li data-letter="E"><strong>Fetal Distress</strong>:Kompromi janin semasa tempoh antepartum (sebelum bersalin) atau tempoh intrapartum (semasa proses kelahiran). Istilah ini biasanya digunakan untuk menggambarkan hipoksia janin (paras oksigen rendah dalam janin), yang boleh mengakibatkan kerosakan atau kematian janin jika ia tidak diterbalikkan atau jika janin tidak dilahirkan dengan segera</li>
+      <li data-letter="F"><strong>Fetus</strong>:Janin</li>
+      <li data-letter="F"><strong>Fibrillation</strong>:Dalam kardiologi, denyutan otot jantung yang tidak normal dan tidak menentu</li>
+      <li data-letter="F"><strong>Fibrosis</strong>:Pembentukan tisu berserabut sebagai proses reparatif atau reaktif, berbanding pembentukan tisu berserabut sebagai juzuk normal organ atau tisu</li>
+      <li data-letter="G"><strong>Gangrene</strong>:Kematian tisu akibat kehilangan bekalan darah yang mencukupi</li>
+      <li data-letter="G"><strong>Gastrectomy</strong>:Pembedahan untuk membuang sebahagian atau keseluruhan perut</li>
+      <li data-letter="G"><strong>Gastroenteritis</strong>:Keradangan perut dan usus. </li>
+      <li data-letter="G"><strong>Genitalia</strong>:Organ pembiakan lelaki dan wanita termasuk struktur dalaman dan luaran</li>
+      <li data-letter="G"><strong>Genitourinary</strong>:Berkenaan dengan sistem pembiakan/ kemaluan dan kencing</li>
+      <li data-letter="G"><strong>GERD</strong>:Penyakit refluks gastroesophageal</li>
+      <li data-letter="G"><strong>Geriatrics</strong>:Cabang perubatan yang berkaitan dengan diagnosis, rawatan dan pencegahan penyakit pada orang tua dan masalah khusus untuk penuaan</li>
+      <li data-letter="G"><strong>Gerontology</strong>:Cabang perubatan yang berkaitan dengan aspek fisiologi dan patologi orang tua, termasuk masalah klinikal penuaan dan nyanyuk</li>
+      <li data-letter="G"><strong>Gestation</strong>:Tempoh masa dari kehamilan hingga kelahiran</li>
+      <li data-letter="G"><strong>Glaucoma</strong>:Keadaan mata di mana tekanan bendalir di dalam mata meningkat ke tahap yang lebih tinggi daripada kesihatan untuk mata itu. Jika tidak dirawat, ia boleh merosakkan saraf optik, menyebabkan kehilangan penglihatan atau bahkan buta</li>
+      <li data-letter="G"><strong>Gigantism</strong>:Pertumbuhan yang abnormal yang menyebabkan ketinggian yang keterlaluan, seringkali disebabkan oleh kelebihan rembesan hormon pertumbuhan (somatotrofin) oleh kelenjar pituitari semasa peringkat kanak-kanak</li>
+      <li data-letter="G"><strong>Globulin</strong>:Satu daripada sekumpulan protien ringkas yang larut dalam larutan encer dan boleh koagulasi oleh haba. serum globulin merupakan satu daripada globulin berlainan yang terdapat dalam darah, termasuk gama globulin. mempunyai fungsi penting sebagai antibodi</li> 
+      <li data-letter="G"><strong>Globulinuria</strong>:Kehadiran globulin dalam air kencing</li>
+      <li data-letter="G"><strong>Glomerulitis</strong>:Satu daripada pelbagai lesi  glomerulus berkaitan dengan penyakit ginjal akut atau kronik</li>
+      <li data-letter="H"><strong>Haematemesis</strong>: (hematemesis) Pemuntahan darah. Sekiranya ia telah berada di dalam perut untuk beberapa ketika dan telah dihadam separa oleh jus gaster, ia berwarna gelap dan mengandungi partikel yang menyerupai serbuk kopi. </li>
+      <li data-letter="H"><strong>Heamaturia</strong>: (Hematuria) kehadiran darah dalam urin, disebabkan oleh kecederaan atau penyakit mana-mana organ urinari</li>
+      <li data-letter="H"><strong>Haemolysis</strong>:(Hemolisis) Pemecahan sel darah merah. Hemolisis berlebihan boleh menyebabkan anemia. Ia mungkin disebabkan oleh jangkitan virus atau bakteria, bahan kimia dan tranfusi darah tidak serasi</li>
+      <li data-letter="H"><strong>Haemopoiesis</strong>: (Hemopoiesis) Pembentukan sel darah merah, yang selalunya berlaku di dalam sumsum tulang dan berterusan sepanjang hayat. </li>
+      <li data-letter="H"><strong>Haemoptysis</strong>: (Hemoptisis) Batuk berdarah daripada paru-paru atau bronkus. Berkeadaan terudara, ianya merah terang dan berbuih. </li>
+      <li data-letter="I"><strong>ldiopathic </strong>:Idiopatik) Digunakan pada suatu keadaan yang tidak diketahui sebabnya. </li>
+      <li data-letter="I"><strong>Ileostomy</strong>: (Ileostomi) Suatu bukaan buatan yang dicipta dari ileum dan dibawa ke permukaan abdomen untuk tujuan pengosongan. Ileostomi boleh bersifat sementara atau kekal. </li>
+      <li data-letter="I"><strong>Imperforate</strong>: (Imperforat) Tanpa apa-apa bukaan. Contohnya: imperforate anus suatu kecacatan kongenital dimana bukaan ini tertutup. </li>
+      <li data-letter="I"><strong>Impetigo</strong>: (Impetigo) suatu keradangan kulit yang akut dan berjangkit yang ditandakan oleh pustul dan keruping; berasal daripada streptokokus atau stafilokokus. Ia paling sering berlaku pada muka dan kulit kepala, terutamanya pada kanak-kanak. </li>
+      <li data-letter="I"><strong>Incontinence</strong>: (Inkontinens) Ketidakupayaan mengawal fungsi dan buangan semulajadi. Contohnya feacal incontinence ketidakupayaan mengawal pembuangan najis</li>
+      <li data-letter="J"><strong>Jaundice</strong>: (Jaundis) ikterus; penyahwarnaan kuning pada kulit dan konjunktiva, disebabkan oleh kewujudan pigmen hempedu di dalam darah sering dikaitkan dengan pruritus</li>
+      <li data-letter="J"><strong>Jejunostomy</strong>: (Jejunostomi) pembuatan satu bukaan ke dalam jejunum melalui dinding abdomen. </li>
+      <li data-letter="J"><strong>Jugular</strong>: (Jugular) berkaitan dengan leher. Jugular veins beberapa vena yang terdapat pada leher yang mengalirkan darah dari kepala</li>
+      <li data-letter="K"><strong>Keratin</strong>:Sejenis protein yang terdapat pada kulit, rambut, dan kuku.</li>
+      <li data-letter="K"><strong>Kyphosis</strong>:Kelengkungan luar yang berlebihan pada tulang belakang,menyebabkan bongkok.</li>
+      <li data-letter="K"><strong>Keloid</strong>:Sejenis parut yang timbul dan lebih besar daripada luka asal.</li>
+      <li data-letter="K"><strong>Ketosis</strong>:Keadaan metabolik yang dicirikan oleh tahap badan keton yang tinggi dalam tisu badan.</li>
+      <li data-letter="K"><strong>Keratitis</strong>:Keradangan kornea mata.</li>
+      <li data-letter="L"><strong>Laparoscopy</strong>:Prosedur pembedahan di mana alat fiber-optik dimasukkan melalui dinding perut untuk melihat organ. </li>
+      <li data-letter="L"><strong>Leukemia</strong>:Sejenis kanser yang bermula di sistem limfa.</li>
+      <li data-letter="L"><strong>Laceration</strong>:Luka yang dalam atau koyakan pada kulit atau daging</li>
+      <li data-letter="L"><strong>Laryngitis</strong>:Keradangan laring, biasanya mengakibatkan kehilangan suara</li>
+      <li data-letter="M"><strong>Mammogram</strong>:Gambar X-ray payudara yang digunakan untuk mengesan kanser payudara</li>
+      <li data-letter="M"><strong>Melanoma</strong>:Sejenis kanser kulit yang serius yang berkembang dalam sel yang menghasilkan melanin.</li>
+      <li data-letter="M"><strong>Meningitis</strong>:Keradangan pada membran (meninges) yang mengelilingi otak dan saraf tunjang.</li>
+      <li data-letter="M"><strong>Myopathy</strong>:Penyakit tisu otot.</li>
+      <li data-letter="M"><strong>Myocarditis</strong>:Keradangan otot jantung.</li>	
+      <li data-letter="N"><strong>Nephrology</strong>:Cabang perubatan yang berkaitan dengan fisiologi dan penyakit buah pinggang.</li>
+      <li data-letter="N"><strong>Neurology</strong>:Cabang perubatan yang berkaitan dengan gangguan sistem saraf.</li>
+      <li data-letter="N"><strong>Neoplasm</strong>:Pertumbuhan tisu yang tidak normal, biasanya dirujuk sebagai tumor.</li>
+      <li data-letter="N"><strong>Nystagmus</strong>:Pergerakan mata yang cepat dan tidak terkawal.</li>
+      <li data-letter="N"><strong>Necrosis</strong>:Kematian tisu badan.</li>
+      <li data-letter="O"><strong>Obstetrics</strong>:Cabang perubatan dan pembedahan yang berkaitan dengan kelahiran anak dan penjagaan wanita yang bersalin.</li>
+      <li data-letter="O"><strong>Ophthalmology</strong>:Cabang perubatan yang berkaitan dengan kajian dan rawatan gangguan dan penyakit mata.</li>
+      <li data-letter="O"><strong>Osteoporosis</strong>:Keadaan di mana tulang menjadi lemah dan rapuh.</li>
+      <li data-letter="O"><strong>Osteoarthritis</strong>:Sejenis artritis yang berlaku apabila tisu fleksibel di hujung tulang haus</li>
+      <li data-letter="O"><strong>Otosclerosis</strong>:Pertumbuhan tulang yang tidak normal dalam telinga tengah.</li>
+      <li data-letter="P"><strong>Palpation</strong>:Teknik pemeriksaan di mana pemeriksa meraba permukaan tubuh dengan tangan untuk menilai saiz, konsistensi, dan lokasi organ atau tisu.</li>
+      <li data-letter="P"><strong>Protein</strong>:Nutrien penting yang terdapat dalam makanan dan diperlukan untuk pertumbuhan, pembaikan tisu, dan fungsi tubuh yang lain.</li>
+      <li data-letter="P"><strong>Pneumonia</strong>:Radang paru-paru yang biasanya disebabkan oleh jangkitan bakteria, virus, atau patogen lain.</li>
+      <li data-letter="P"><strong>Palliative </strong>:Meredakan kesakitan atau mengurangkan masalah tanpa menangani punca asalnya, sering digunakan dalam konteks penjagaan paliatif, yang memberi tumpuan kepada meningkatkan kualiti hidup pesakit yang menghidapi penyakit serius. </li>
+      <li data-letter="P"><strong>Pathology</strong>:Kajian tentang penyakit dan kesannya terhadap tubuh.</li>
+      <li data-letter="P"><strong>Potassium</strong>:Kalium (K), elektrolit penting dalam tubuh.</li>     
+      <li data-letter="Q"><strong>Quadriplegia</strong>:Keadaan medikal di mana seseorang mengalami kecacatan separa kekal atau penuh pada semua empat anggota badan, biasanya disebabkan oleh kecederaan serius pada saraf tunjang leher atau penyakit yang menjejaskan kawasan tulang belakang leher. </li>
+      <li data-letter="Q"><strong>Quinism </strong>:Kumpulan gejala yang disebabkan oleh keracunan daripada derivatif kwinolin, terutamanya ubat antimalaria mefloquine (juga dikenali sebagai Lariam). </li>
+      <li data-letter="R"><strong>Rabies </strong>:Penyakit virus yang menyebabkan ensefalitis pada manusia dan mamalia lain</li>
+      <li data-letter="R"><strong>Rectum</strong>(Rektum)Bahagian hujung usus besar yang menghubungkan kolon dengan dubur</li>
+      <li data-letter="R"><strong>Retina </strong>:Lapisan tisu yang terletak di belakang mata yang berfungsi untuk mengesan cahaya dan menghantar isyarat visual ke otak melalui saraf optik. </li>
+      <li data-letter="S"><strong>Schizophrenia</strong>:Satu gangguan mental yang teruk yang ditandai dengan gangguan dalam pemikiran, persepsi, emosi, dan tingkah laku. Individu yang menghidap schizophrenia mungkin mengalami halusinasi, waham, pemikiran yang tidak teratur, dan gangguan dalam fungsi sosial. </li>
+      <li data-letter="S"><strong>Scoliosis</strong>:Satu keadaan perubatan yang ditandai dengan lengkungan sisi tidak normal tulang belakang. Ia boleh berlaku dalam pelbagai tahap keparahan dan mungkin memerlukan rawatan bergantung kepada tahap lengkungan dan gejala yang dialami. </li>
+      <li data-letter="S"><strong>Seizure</strong>:Gangguan elektrik tiba-tiba dan tidak terkawal di dalam otak yang menyebabkan perubahan tingkah laku, gerakan, dan kesedaran. </li>
+      <li data-letter="S"><strong>Symptom</strong>: (Simptom) Bukti subjektif suatu penyakit atau gangguan fizikal, seperti sakit atau kelemahan. </li>
+      <li data-letter="S"><strong>Stoma </strong>:Pembukaan tiruan yang dicipta melalui pembedahan di dalam abdomen (biasanya dalam usus atau sistem buang air kecil) untuk mengalihkan sisa badan atau cecair. </li>
+      <li data-letter="T">strong>Thrombosis</strong>:Kegagalan dalam sistem pembekuan darah yang menyebabkan pembentukan gumpalan darah di dalam pembuluh darah. </li>
+      <li data-letter="T"><strong>Tonsillitis</strong>:Radang tonsil yang biasanya disebabkan oleh jangkitan bakteria.</li>
+      <li data-letter="T"><strong>Tachycardia</strong>:Denyutan jantung yang cepat melebihi 100/min.</li>
+      <li data-letter="T"><strong>Thalassemia</strong>:Penyakit genetik yang dicirikan oleh penghasilan hemoglobin yang tidak normal, yang menyebabkan anemia. Biasanya disebabkan oleh mutasi dalam gen yang menghasilkan rantai globin alfa atau beta, yang mengakibatkan pengurangan pengeluaran rantai globin tersebut. </li>
+      <li data-letter="T"><strong>Tachypnea</strong>:Pernafasan yang terlalu cepat dan pendek.</li>
+      <li data-letter="U"><strong>Ulcer</strong>:Pecah pada kulit atau membran mukus dengan kehilangan tisu permukaan, perpecahan dan nekrosis tisu epitelium, dan selalunya nanah</li>
+      <li data-letter="U"><strong>Umbilical </strong>:Daripada atau berkaitan dengan kawasan perut tengah yang terletak di antara kawasan lumbar kanan dan kiri dan antara kawasan epigastrik di atas dan kawasan hipogastrik di bawah</li>
+      <li data-letter="U"><strong>Ulna</strong>:Tulang di bahagian jari kelingking lengan manusia yang terbentuk dengan humerus sendi siku dan berfungsi sebagai pivot dalam putaran tangan</li>
+      <li data-letter="U"><strong>Ultrasound</strong>: Penggunaan diagnostik atau terapeutik ultrasound dan terutamanya teknik bukan invasif yang melibatkan pembentukan imej dua dimensi yang digunakan untuk pemeriksaan dan pengukuran struktur dalaman badan dan pengesanan keabnormalan badan</li>
+      <li data-letter="U"><strong>Uremia</strong>:Pengumpulan dalam juzuk darah yang biasanya disingkirkan dalam air kencing yang menghasilkan keadaan toksik yang teruk dan biasanya berlaku dalam penyakit buah pinggang yang teruk</li>
+      <li data-letter="U"><strong>Ureter </strong>:Saluran berpasangan yang membawa air kencing dari buah pinggang ke pundi kencing atau kloaka dan pada manusia adalah tiub rata yang dibarisi epitelium membran langsing kira-kira enam belas inci (41 sentimeter) panjang yang terbuka di atas ke dalam pelvis buah pinggang dan di bawah ke dalam bahagian belakang bahagian pundi kencing yang sama pada sudut yang sangat serong</li>
+      <li data-letter="V"><strong>Vagina</strong>:Saluran yang menuju dari vulva ke serviks. </li>
+      <li data-letter="V"><strong>Varicella</strong>:Nama perubatan untuk cacar air</li>
+      <li data-letter="V"><strong>Vein</strong>:Salur darah yang membawa darah ke jantung</li>
+      <li data-letter="V"><strong>Vulva</strong>:Kawasan sekitar pembukaan faraj. Ia termasuk bibir faraj dalam dan luar (labia) dan kelentit. </li>
+      <li data-letter="V"><strong>Vomiting </strong>:1.Sebagai pengusiran oral kandungan gastrousus, disebabkan oleh penguncupan usus dan otot dinding  torakoabdominal. 2. Muntah</li>
+      <li data-letter="W"><strong>Wheezing</strong>: Kesukaran bernafas biasanya seperti dengan bunyi siulan</li>
+      <li data-letter="W"><strong>Wheal</strong>:Tanda alergi setempat kemerahan atau gatal-gatal yang menonjol pada kulit</li>
+      <li data-letter="W"><strong>Weber’s test</strong>:Ujian pendengaran dan satu garfu tala yang bergetar diletakkan pada titik pertengahan dahi. Jika satu telinga mengalami ketulian konduksi,bunyi kedengaran lebih kuat oleh telinga tersebut. </li>
+      <li data-letter="X"><strong>Xanthaemia</strong>:Kehadiran pigmen berwarna kuning,karotenia,dalam darah akibat pengambilan berlebihan pengambilan lobak merah,tomato,atau sayur-sayuran lain yang mengandungi pigmen ini. (carotenaemia) </li>
+      <li data-letter="X"><strong>Xerosis</strong>:Kekeringan konjuntiva kulit atau membran mucus yang luar biasa. Dalam xerosis yang melibatkan konjuktiva,membran itu menjadi tebal dan kelabu pada kawasan yang terdedah apabila kelopak mata membuka. </li>
+      <li data-letter="X"><strong>Xiphoid process</strong>:Bahagian yang paling bawah pada tulang dada;satu rawan yang datar dan runcing yang beransur-ansur mengalami osifikasi sehingga ia digantikan sepenuhnya oleh tulang.Tidak berartikulasi dengan sebarang tulang rusuk. (cuaran xipoid) </li>
+      <li data-letter="Y"><strong>Y chromosome</strong>:Kromosom seks yang terdapat pada lelaki dan bukan perempuan. Ia dipercayai membawa gen bagi lelaki. </li>
+      <li data-letter="Y"><strong>Yolk sac</strong>:Pundi bermembran terletak ventral kepada embrio. Ia mungkin membantu mengangkut nutrient ke embrio awal dan merupakan salah satu tapak pertama apabila sel darah terbentuk</li>
+      <li data-letter="Z"><strong>Zonule</strong>:Jalur atau zona kecil. Ligamen suspensori pada kanta mata</li>      
+    </ul>
+  </div>
+</div>
+<section id="feedback">
+  <h2>Beri Maklum Balas Anda</h2>
+  <div class="rating">
+    <span class="star" onclick="rate(1)">&#9733;</span>
+    <span class="star" onclick="rate(2)">&#9733;</span>
+    <span class="star" onclick="rate(3)">&#9733;</span>
+    <span class="star" onclick="rate(4)">&#9733;</span>
+    <span class="star" onclick="rate(5)">&#9733;</span>
+  </div>
+  <textarea id="commentBox" placeholder="Tinggalkan komen anda di sini..."></textarea><br>
+  <button onclick="submitFeedback()">Hantar</button>
+
+  <div id="feedbackList">
+    <h3>Komen Pengguna</h3>
+    <ul id="commentList"></ul>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 DIGITAL DIC. Semua Hak Terpelihara.</p>
+  <p>Disclaimer: Laman web ini disediakan untuk tujuan pendidikan sahaja.</p>
+  <p>Perhatian: Sila ambil perhatian bahawa laman web ini masih dalam fasa pembangunan dan beberapa istilah perubatan mungkin terhad atau belum dimasukkan sepenuhnya.Kami sedang berusaha untuk memperbaharui dan memperluaskan kandungan secara berterusan.</p>
+</footer>
+
+<script>
+  let selectedLetter = "ALL";
+
+  function setLetter(letter) {
+    selectedLetter = letter;
+    filterTerms();
+  }
+
+  function filterTerms() {
+    const input = document.getElementById("searchInput").value.toUpperCase();
+    const terms = document.querySelectorAll("#termList li");
+
+    terms.forEach(term => {
+      const text = term.textContent.toUpperCase();
+      const letter = term.getAttribute("data-letter");
+
+      const matchText = text.includes(input);
+      const matchLetter = selectedLetter === "ALL" || letter === selectedLetter;
+
+      term.style.display = (matchText && matchLetter) ? "" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
